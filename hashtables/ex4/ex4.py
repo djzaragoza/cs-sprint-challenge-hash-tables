@@ -4,7 +4,7 @@ def has_negatives(a):
     """
     # Your code here
     # create open dict
-    my_dict - {}
+    my_dict = {}
 
     # create open list
     pos_nums = []
