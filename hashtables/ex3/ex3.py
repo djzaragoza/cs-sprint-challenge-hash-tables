@@ -4,6 +4,40 @@ def intersection(arrays):
     """
     # Your code here
 
+    my_cache = {}
+    result = []
+
+    for i in arrays:
+        for j in i:
+            if j in my_cache:
+                my_cache[j] += 1
+            else:
+                my_cache[j] = 1
+    for newList in my_cache:
+        if my_cache[newList] == len(arrays):
+            result.append(newList)
+    # # get count of array
+    # arr_count = len(arrays)
+
+    # # create open dict
+    # total = {}
+
+    # # need to find total for the first list, at 0th position
+    # for i in arrays[0]:
+    #     # add all i to the total dict
+    #     total[i] = 1
+
+    # # for every list after
+    # for next_arr in arrays[1:]:
+    #     # find total occurences
+    #     for new_item in next_arr:
+    #         # if new item is in total dict
+    #         if new_item in total:
+    #             # increment total at new_item-th index by 1
+    #             total[new_item] += 1
+
+    #     # iterate through key and value in total dict and set equal to result
+    #     result = [key for (key, val) in total.items() if val == arr_count]
     return result
 
 
